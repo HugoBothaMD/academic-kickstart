@@ -1,0 +1,100 @@
+---
+title: "Naming"
+author: "Hugo Botha"
+date: "10/11/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(brms)
+```
+
+
+## R Markdown
+
+```{r}
+# Read the data
+naming.data=read_csv('C:/Users/hboth/Downloads/Database1.22.csv')
+
+substrRight <- function(x, n){
+  substr(x, nchar(x)-n+1, nchar(x))
+}
+
+naming.data.clean=naming.data %>%
+  gather(ItemName,Correct,-id,-Age,-Sex,-Handedness,-Diagnosis) %>%
+  mutate(type=substrRight(ItemName,1),
+         item=str_remove(ItemName,pattern = " "),
+         dx=ifelse(Diagnosis %in% c("PPAOS","DAOS","FTD/PPAOS"),"PAOS",
+                   ifelse(Diagnosis %in% c("LPA","LPA/PFA"),"LPA",Diagnosis)),
+         AgeScaled=(Age-65)/10) %>%
+  select(-ItemName) %>% 
+  mutate(category=ifelse(grepl("mouse|cat|rabbit|frog|cow|dog|squirrel|horse|penguin|monkey|eagle|ostrich|pig|raccoon|kangaroo|owl|swan|alligator|tiger|peacock",item,ignore.case = T),"Animal",
+                         ifelse(grepl("liberty|eiffel|golden|gateway|great|leaning|pentagon|white|hoover|epcot",item,ignore.case = T),"Landmark",
+                                ifelse(grepl("trump|clinton|oprah|sinatra|diana|reagan|bush|rather|barbra|elvis",item,ignore.case = T),"Person","Tool"))))
+
+formula_2pl_dxtypecategory_interact <- bf(Correct ~ exp(logalpha) * eta,
+                  eta ~ 1 + dx*type+type*category + (0+dx | item) + (0+type*category | id),
+                  logalpha ~ 1 +(1 |item),
+                  nl = TRUE
+                  ) 
+
+#get_prior(formula_2pl,naming.data.clean,brmsfamily("bernoulli", "logit"))
+
+
+prior=set_prior("lkj(3)",class = "cor", group = "item")+
+  set_prior("lkj(3)",class = "cor", group = "id")+
+  set_prior("normal(0,2)",class = "b", coef = "Intercept", nlpar = "eta")+
+  set_prior("normal(0,2)",class = "b", nlpar = "eta")+
+  set_prior("normal(0,1)",class="sd",group =  "id", nlpar = "eta")+
+  set_prior("normal(0,1)",class="sd",group =  "item", nlpar = "eta")+
+  set_prior("normal(0,2)",class="b",coef =  "Intercept", nlpar = "logalpha")+
+  set_prior("normal(0,1)",class="sd",group =  "item",coef =  "Intercept", nlpar = "logalpha")
+
+
+model_2pl_dxtypecategory_interact= brm(formula_2pl_dxtypecategory_interact,
+               #sample_prior="only",
+               prior = prior,
+               iter = 2500,
+               warmup = 1000,
+               data = naming.data.clean,
+               family = brmsfamily("bernoulli", "logit"),
+               cores = 4,
+               chains = 4)
+
+
+
+
+formula_2pl_typecategory_interact <- bf(Correct ~ exp(logalpha) * eta,
+                  eta ~ 1 + type+type*category + (1 | item) + (0+type*category | id),
+                  logalpha ~ 1 +(1 |item),
+                  nl = TRUE
+                  ) 
+
+#get_prior(formula_2pl,naming.data.clean,brmsfamily("bernoulli", "logit"))
+
+
+prior=set_prior("lkj(3)",class = "cor", group = "id")+
+  set_prior("normal(0,2)",class = "b", coef = "Intercept", nlpar = "eta")+
+  set_prior("normal(0,2)",class = "b", nlpar = "eta")+
+  set_prior("normal(0,1)",class="sd",group =  "id", nlpar = "eta")+
+  set_prior("normal(0,1)",class="sd",group =  "item", nlpar = "eta")+
+  set_prior("normal(0,2)",class="b",coef =  "Intercept", nlpar = "logalpha")+
+  set_prior("normal(0,1)",class="sd",group =  "item",coef =  "Intercept", nlpar = "logalpha")
+
+
+model_2pl_typecategory_interact= brm(formula_2pl_typecategory_interact,
+               #sample_prior="only",
+               prior = prior,
+               iter = 2500,
+               warmup = 1000,
+               data = naming.data.clean,
+               family = brmsfamily("bernoulli", "logit"),
+               cores = 4,
+               chains = 4)
+
+
+  
+```
+

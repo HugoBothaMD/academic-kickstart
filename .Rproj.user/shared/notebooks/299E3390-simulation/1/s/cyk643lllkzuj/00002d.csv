@@ -1,0 +1,84 @@
+"0","control.prior=set_prior(""normal(0.5,0.25)"",class = ""Intercept"")+
+  set_prior(""normal(0.25,0.15)"",class=""b"",coef = ""age"")+
+  set_prior(""normal(0.4,0.2)"",class=""b"",coef = ""male"")+
+  set_prior(""normal(0.3,0.4)"",class=""b"",coef = ""tiv"")+
+  set_prior(""normal(0.5,0.3)"",class=""sigma"")
+
+simul.control= brm(y~1+age+male+tiv,sample_prior=""only"",prior = control.prior,iter = 1000,warmup = 500,data = control.data,family = gaussian())
+"
+"2","Compiling Stan program...
+"
+"2","'C:/rtools40/usr/mingw_/bin/g++' not found"
+"2","Start sampling
+"
+"2","
+"
+"2","==== C stack trace ===============================
+
+	(No symbol) [0x0x6adaf8e0]
+	R_RunWeakRefFinalizer [0x0x6c83373f+383]
+	R_RunWeakRefFinalizer [0x0x6c8339ed+1069]
+	R_initAssignSymbols [0x0x6c7f6ac5+73941]
+	Rf_eval [0x0x6c7fbd01+369]
+	R_cmpfun1 [0x0x6c7fd9e0+1152]
+	Rf_applyClosure [0x0x6c7fec9a+442]
+	R_initAssignSymbols [0x0x6c7f2b47+57687]
+	Rf_eval [0x0x6c7fbd01+369]
+	R_cmpfun1 [0x0x6c7fd9e0+1152]
+	R_execMethod [0x0x6c7ff0ee+526]
+	R_dispatchGeneric [0x0x64a42e22+1250]
+	R_set_standardGeneric_"
+"2","ptr [0x0x6c83d258+1128]
+	R_initAssignSymbols [0x0x6c7ec10d+30493]
+	Rf_eval [0x0x6c7fbd01+369]
+	R_cmpfun1 [0x0x6c7fd9e0+1152]
+	Rf_applyClosure [0x0x6c7fec9a+442]
+	R_initAssignSymbols [0x0x6c7f2b47+57687]
+	Rf_eval [0x0x6c7fbd01+369]
+	R_cmpfun1 [0x0x6c7fd9e0+1152]
+	Rf_applyClosure [0x0x6c7fec9a+442]
+	R_initAssignSymbols [0x0x6c7f2b47+57687]
+	Rf_eval [0x0x6c7fbd01+369]
+	R_cmpfun1 [0x0x6c7fd9e0+1152]
+	Rf_applyClosure [0x0x6c7fec9a+442]
+	R_initAssignSymbols [0x0x6c7f2b47+57687]
+	Rf_eval [0x0x6c7fbd0"
+"2","1+369]
+	R_cmpfun1 [0x0x6c7fd9e0+1152]
+	Rf_applyClosure [0x0x6c7fec9a+442]
+	R_initAssignSymbols [0x0x6c7f2b47+57687]
+	Rf_eval [0x0x6c7fbd01+369]
+	R_cmpfun1 [0x0x6c7fd9e0+1152]
+	Rf_applyClosure [0x0x6c7fec9a+442]
+	R_initAssignSymbols [0x0x6c7f2b47+57687]
+	Rf_eval [0x0x6c7fbd01+369]
+	R_cmpfun1 [0x0x6c7fd9e0+1152]
+	Rf_applyClosure [0x0x6c7fec9a+442]
+	R_initAssignSymbols [0x0x6c7f2b47+57687]
+	Rf_eval [0x0x6c7fbd01+369]
+	R_cmpfun1 [0x0x6c7fd9e0+1152]
+	Rf_applyClosure [0x0x6c7fec9a+442]
+	R_initAssig"
+"2","nSymbols [0x0x6c7f2b47+57687]
+	Rf_eval [0x0x6c7fbd01+369]
+	R_cmpfun1 [0x0x6c7fd9e0+1152]
+	Rf_applyClosure [0x0x6c7fec9a+442]
+	R_initAssignSymbols [0x0x6c7f2b47+57687]
+	Rf_eval [0x0x6c7fbd01+369]
+	R_cmpfun1 [0x0x6c7fd9e0+1152]
+	Rf_applyClosure [0x0x6c7fec9a+442]
+	R_set_quick_method_check [0x0x6c83def8+744]
+	R_forceAndCall [0x0x6c803403+8291]
+	Rf_fixSubset3Args [0x0x6c8ccde5+2261]
+	Rf_eval [0x0x6c7fc0e5+1365]
+	R_forceAndCall [0x0x6c801f93+3059]
+	R_initAssignSymbols [0x0x6c7ebf69+30073]
+	Rf_eval "
+"2","[0x0x6c7fbd01+369]
+	R_cmpfun1 [0x0x6c7fd9e0+1152]
+	Rf_applyClosure [0x0x6c7fec9a+442]
+	R_initAssignSymbols [0x0x6c7f2b47+57687]
+	Rf_eval [0x0x6c7fbd01+369]
+	R_cmpfun1 [0x0x6c7fd9e0+1152]
+	Rf_applyClosure [0x0x6c7fec9a+442]
+"

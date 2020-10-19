@@ -1,0 +1,9 @@
+@article{botha2015classification,
+  title={Classification and clinicoradiologic features of primary progressive aphasia (PPA) and apraxia of speech},
+  author={Botha, Hugo and Duffy, Joseph R and Whitwell, Jennifer L and Strand, Edythe A and Machulda, Mary M and Schwarz, Christopher G and Reid, Robert I and Spychalla, Anthony J and Senjem, Matthew L and Jones, David T and others},
+  journal={Cortex},
+  volume={69},
+  pages={220--236},
+  year={2015},
+  publisher={Elsevier}
+}
