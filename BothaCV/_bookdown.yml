@@ -1,0 +1,14 @@
+output_dir: "docs"
+rmd_files:
+  - "index.Rmd"
+  - "education.Rmd"
+  - "award.Rmd"
+  - "membership.Rmd"
+  - "teaching_exp.Rmd"
+  - "institutional.Rmd"
+  - "mentoring.Rmd"
+  - "grant.Rmd"
+  - "presentation.Rmd"
+  - "publication.Rmd"
+book_filename: "Hugo_Botha_CV"
+delete_merged_file: true

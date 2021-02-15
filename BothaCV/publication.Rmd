@@ -1,0 +1,54 @@
+# Bibliography
+
+```{r}
+a=vitae::bibliography_entries(bibliography_bookchp)
+n=nrow(a)
+```
+
+
+## Book Chapters `r paste0("(",n,")")`
+\begingroup
+\footnotesize
+\setlength{\leftskip}{0.1in}
+\setlength{\parindent}{-0.1in}
+
+::: {#refs_bookchp}
+:::
+
+\endgroup
+
+```{r}
+a=vitae::bibliography_entries(bibliography_preprint)
+n=nrow(a)
+```
+
+## Preprints `r paste0("(",n,")")`
+
+\begingroup
+\footnotesize
+\setlength{\leftskip}{0.1in}
+\setlength{\parindent}{-0.1in}
+
+::: {#refs_preprint}
+:::
+
+\endgroup
+
+```{r}
+a=vitae::bibliography_entries(bibliography_journals)
+n=nrow(a)
+```
+
+## Peer Reviewed `r paste0("(",n,")")`
+
+\begingroup
+\footnotesize
+\setlength{\leftskip}{0.1in}
+\setlength{\parindent}{-0.1in}
+
+::: {#refs_journals}
+:::
+
+\endgroup
+
+

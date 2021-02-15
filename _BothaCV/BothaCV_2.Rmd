@@ -1,0 +1,293 @@
+---
+name: Hugo
+surname: Botha
+position: "Assistant Professor"
+address: "Department of Neurology, Mayo Clinic"
+www: www.github.io/HugoBothaMD
+email: "botha.hugo@mayo.edu"
+twitter: HugoBothaMD
+profilepic: avatar.jpg
+date: "`r format(Sys.time(), '%B %Y')`"
+headcolor: 414141 # use black color
+csl: apa-cv.csl # change this if you want to use other citation styles
+bibliography_published: "forsite_cv.bibtex" # use separate .bib files and assign each of them a unique key: bibliography_*
+output: 
+  vitae::awesomecv:
+    keep_tex: yes
+    pandoc_args: 
+      - --lua-filter=multiple-bibliographies.lua
+      - --pdf-engine=xelatex
+nocite: '@*' # don't change this if you want to print out all the refs
+
+#output: vitae::latexcv    
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+library(vitae)
+library(tidyverse)
+require(RefManageR)
+require(dplyr)
+require(stringr)
+require(anytime)
+require(tibble)
+require(readr)
+library(rmarkdown)
+old_dir=getwd()
+```
+
+# Research Interests
+
+\begingroup
+\small
+
+Neurodegenerative disease, Neuroimaging, Machine learning, Bayesian statistics
+
+\endgroup
+
+
+# Education
+
+```{r}
+library(tibble)
+tribble(
+  ~ Degree, ~Advisor, ~ Year, ~ Institution, ~ Where,
+  "Bachelor of Medicine Bachelor of Surgery (MBChB)", NA,"01/2006-12/2011","University of Stellenbosch","Cape Town, WC, SA",
+  "Neurology Residency, Department of Neurology", NA,"07/2012-06/2016","Mayo Clinic","Rochester, MN, USA",
+  "Behavioral Neurology Fellowship, Department of Neurology", NA,"07/2016-06/2017","Mayo Clinic","Rochester, MN, USA",
+  "Clinician Investigator Program, Department of Radiology",NA,"07/2017-06/2019","Mayo Clinic","Rochester, MN, USA",
+) %>% 
+  detailed_entries(what=Degree, when=Year, with=Institution, where=Where, why=Advisor)
+```
+
+# Awards
+
+```{r}
+tribble(
+  ~Year, ~Name, ~Institution,~Description,
+   2011, "Rector’s Award for Excellent Achievement: Academics", "University of Stellenbosch","Awarded for outstanding achievement in either academics, sport or culture",
+  2011, "Graduated with Honors", "University of Stellenbosch",NA,
+  2011, "Faculty of Health Sciences Medal for Best Graduating Student", "University of Stellenbosch","Awarded to the best undergraduate student from the graduating classes in health and allied health sciences",
+  2016, "Mayo Brother's Fellowship Award", "Mayo Clinic","Based on the qualities associated with the founders, including outstanding clinical performance, humanitarianism, and scholarly activity",
+   2016, "Department of Neurology Research Award", "Mayo Clinic","Recognition of outstanding basic or clinical research during residency or
+fellowship"
+   
+) %>% 
+  detailed_entries(
+    where = Year,
+    with = Name, 
+    what = Institution,
+    why = Description
+  )
+```
+
+# Professional Memberships and Activities
+
+## Society Membership
+```{r}
+tribble(
+  ~Year, ~Name, ~Role,
+  "2013-present", "American Academy of Neurology", "Member",
+  "2017-present", "International Society to Advance Alzheimer's Research and Treatment", "Member",
+  "2017-present", "Organization for Human Brain Mapping", "Member",
+  "2020-present", "International Society for Frontotemporal Dementias", "Member",
+  "2020-present", "Organization for Computational Neurosciences", "Member"
+) %>% 
+  detailed_entries(
+    when = Year,
+    with = Name, 
+    what = Role
+  )
+```
+
+## Professional Service
+```{r}
+tribble(
+  ~Type, ~Name, ~Role,
+  "Conferences","American Academy of Neurology Annual Meeting (2016)", "Course Monitor",
+  NA,"Alzheimer's Association International Conference (2018, 2019, 2020)",  "Abstract Reviewer",
+  "Journals", "Alzheimer's Research & Therapy","Ad Hoc Reviewer",
+  "Journals", "Brain","Ad Hoc Reviewer",
+  "Journals", "Human Brain Mapping","Ad Hoc Reviewer",
+  "Journals", "JAMA Psychiatry","Ad Hoc Reviewer",
+  "Journals", "Journal of Alzheimer's Disease","Ad Hoc Reviewer",
+  "Journals", "Journal of the Neurological Sciences","Ad Hoc Reviewer",
+  "Journals", "Mayo Clinic Proceedings","Ad Hoc Reviewer",
+  "Journals", "Medical Image Analysis","Ad Hoc Reviewer",
+  "Journals", "Nature: Scientific Reports","Ad Hoc Reviewer",
+  "Journals", "Neurobiology of Aging","Ad Hoc Reviewer",
+  "Journals", "NeuroImage: Clinical","Ad Hoc Reviewer",
+  "Journals", "Neurology","Ad Hoc Reviewer",
+  "Journals", "Neuropsychologia","Ad Hoc Reviewer",
+  "Journals", "Parkinsonism and Related disorders","Ad Hoc Reviewer",
+) %>% 
+  detailed_entries(
+    why =  Name,
+    with=Type,
+    what = Role
+  )
+```
+
+
+# Teaching
+
+## Internal Lectures
+
+```{r}
+tribble(
+  ~Type, ~Name, ~Role,
+  "Neurology Residency Program","Bedside Cognitive Assessment (2018,2019,2020)", "Basic Summer Lecture Series",
+  NA,"Cortex I:  Cytoarchitecture and Organization (2019, 2020)",  "Neuroanatomy Course",
+  NA, "Cortex II:  Lobes and Functions (2019, 2020)","Neuroanatomy Course",
+) %>% 
+  detailed_entries(
+    why =  Name,
+    with=Type,
+    what = Role
+  )
+```
+
+## Internal Conferences
+```{r}
+tribble(
+  ~Type, ~Name, ~Role,
+  "Neurology Department","Neurology Clinicopathologic Conference - A young man with progressive language difficulty (2015)", "Grand Rounds",
+  NA," Left Speechless: Dealing with the word salad of progressive aphasia and apraxia of speech (2015)",  "Subspecialty Conference",
+  NA, "The left hand of neurology: sinistrality, hemispheric specialization and neurodegenerative disease (2017)","Subspecialty Conference"
+) %>% 
+  detailed_entries(
+    why =  Name,
+    with=Type,
+    what = Role
+  )
+```
+
+## Lay Public Focused Talks
+```{r}
+tribble(
+  ~Type, ~Name, ~Role,
+  "ADRC Patient-Caregiver Seminars","Making a Diagnosis", "Posterior Cortical Atrophy Education Seminar",
+  NA," Journey to the Diagnosis (2017)",  "CBD and PSP Education Seminar",
+  NA, "FTD/PPA: Making a Diagnosis (2017)","Frontotemporal Dementia and Primary Progressive Aphasia Education Seminar",
+  NA, "FTD/PPA: Pathology and Pathophysiology (2017)","Frontotemporal Dementia and Primary Progressive Aphasia Education Seminar",
+  "Invited Talks","Latest Findings and Trends in Research (2017)", "Chesley Center on Aging 2017 Dementia Care Conference",
+) %>% 
+  detailed_entries(
+    why =  Name,
+    with=Type,
+    what = Role
+  )
+```
+
+# Institutional/Departmental Activities
+
+## Active
+```{r}
+tribble(
+  ~Year, ~Name,~Project1,
+  '2019 - Current', "Neurology Research Committee","Voting Member",
+  '2020 - Current', "Neurology Artificial Intelligence Program","Deputy Director",
+  '2020 - Current', "Behavioral Neurology Fellowship","Deputy Director",
+  '2020 - Current', "Machine Learning/Deep Learning Journal Club","Section Chair (Neurology)"
+) %>% 
+  detailed_entries(
+    where = Year,
+    with = Name, 
+    what = Project1
+  )
+```
+
+## Prior
+```{r}
+tribble(
+  ~Year, ~Name,~Project1,
+  '2012 - 2013', "Mayo Internal Medicine Residents Council","Prelim-year representative",
+  '2014 - 2016', "Neurology Residency Recruitment Committee","Voting Member"
+) %>% 
+  detailed_entries(
+    where = Year,
+    with = Name, 
+    what = Project1
+  )
+```
+
+# Mentoring
+```{r}
+tribble(
+  ~Year, ~Name,~Project1,~Status,
+  '2019 - Current', "Johhny Dang (Medical student)","Project: Delays in the diagnosis of PPAOS","Abstract submitted to AAN 2021",
+  '2019 - Current', "Johhny Dang (Medical student)","Project: Delays in the diagnosis of PPAOS","\nManuscript in preparation",
+  '2020 - Current', "Zeynep Secking (Intern)","Project: Neurologic causes for delusional infestation","\nManuscript in preparation",
+  '2020 - Current', "Ryan Coburn (Neurology Resident)","Project: FDG-PET to predict decline in atypical Alzheimer's disease","\nData collection in progress"
+) %>% 
+  detailed_entries(
+    where = Year,
+    with = Name, 
+    what = Project1,
+    why=Status
+  )
+
+```
+
+# Research funding
+
+## Active
+```{r}
+tribble(
+  ~Year, ~Name, ~FundingSource,~GrantNo,
+  "2017-2022", "The neurobiology of two distinct types of progressive apraxia of speech (Co-I)", "National Institute on Deafness and Other Communication Disorders", "R01 DC 14942",
+  "2018-2023", "Longitudinal multi-modality imaging in progressive apraxia of speech (Co-I)", "National Institute on Deafness and Other Communication Disorders", "R01 DC 12519",
+  "2019-2024", "ARTFL LEFFTDS Longitudinal Frontotemporal Lobar Degeneration (ALLFTD) (Co-I)", " National Institute on
+Aging", "U19 AG 63911",
+  "2020-2022", "Independent brain metabolic patterns in Progressive Supranuclear Palsy (Co-I)", "National Institute of
+Neurological Disorders and Stroke", "R03 NS 114365"
+) %>% 
+  detailed_entries(
+    where = Year,
+    with = Name, 
+    what = FundingSource,
+    when = GrantNo
+  )
+```
+
+# Publications
+
+```{r, echo=FALSE}
+#We need to fix the formatting
+l <- readLines("~/GitHub/academic-kickstart/forsite.bib")
+l=gsub("Botha","{\\\\bf Botha}",l)
+l=gsub("\\\\textendash","-",l)
+l[grep("\\tfile", l)] <- 
+  ""
+#l=gsub("Graffâ€ Radford","Graff-Radford",l)
+
+
+write_lines(l,"forsite_cv.bibtex")
+
+
+
+```
+
+<!-- Notes: copy and paste the following block for any other bibliography sections with the same bibliography key matched that you assigned in YAML  -->
+\begingroup
+\setlength{\parindent}{-0in}
+\setlength{\leftskip}{0in}
+\setlength{\rightskip}{0.1in}
+\footnotesize
+
+::: {#refs_published}
+:::
+
+\endgroup
+<!-- Bib-printing block ends here. -->
+
+
+
+
+
+
+
+
+
+
+

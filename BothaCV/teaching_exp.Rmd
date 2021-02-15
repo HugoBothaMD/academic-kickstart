@@ -1,0 +1,49 @@
+# Teaching
+
+## Internal Lectures
+
+```{r}
+tribble(
+  ~Type, ~Name, ~Role,
+  "Neurology Residency Program","Bedside Cognitive Assessment (2018,2019,2020)", "Basic Summer Lecture Series",
+  NA,"Cortex I:  Cytoarchitecture and Organization (2019, 2020)",  "Neuroanatomy Course",
+  NA, "Cortex II:  Lobes and Functions (2019, 2020)","Neuroanatomy Course",
+) %>% 
+  detailed_entries(
+    why =  Name,
+    with=Type,
+    what = Role
+  )
+```
+
+## Internal Conferences
+```{r}
+tribble(
+  ~Type, ~Name, ~Role,
+  "Neurology Department","Neurology Clinicopathologic Conference - A young man with progressive language difficulty (2015)", "Grand Rounds",
+  NA," Left Speechless: Dealing with the word salad of progressive aphasia and apraxia of speech (2015)",  "Subspecialty Conference",
+  NA, "The left hand of neurology: sinistrality, hemispheric specialization and neurodegenerative disease (2017)","Subspecialty Conference"
+) %>% 
+  detailed_entries(
+    why =  Name,
+    with=Type,
+    what = Role
+  )
+```
+
+## Lay Public Focused Talks
+```{r}
+tribble(
+  ~Type, ~Name, ~Role,
+  "ADRC Patient-Caregiver Seminars","Making a Diagnosis", "Posterior Cortical Atrophy Education Seminar",
+  NA," Journey to the Diagnosis (2017)",  "CBD and PSP Education Seminar",
+  NA, "FTD/PPA: Making a Diagnosis (2017)","Frontotemporal Dementia and Primary Progressive Aphasia Education Seminar",
+  NA, "FTD/PPA: Pathology and Pathophysiology (2017)","Frontotemporal Dementia and Primary Progressive Aphasia Education Seminar",
+  "Invited Talks","Latest Findings and Trends in Research (2017)", "Chesley Center on Aging 2017 Dementia Care Conference",
+) %>% 
+  detailed_entries(
+    why =  Name,
+    with=Type,
+    what = Role
+  )
+```

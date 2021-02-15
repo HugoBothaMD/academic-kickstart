@@ -22,6 +22,7 @@ url_poster = ""
 url_source = ""
 math = true
 highlight = true
+featured = true
 [header]
 image = ""
 caption = ""

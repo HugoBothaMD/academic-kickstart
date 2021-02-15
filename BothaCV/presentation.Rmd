@@ -1,0 +1,22 @@
+# Presentations
+
+```{r}
+a=vitae::bibliography_entries(bibliography_selected)
+n=nrow(a)
+```
+
+## Conference Presentations `r paste0("(",n,")")`
+
+
+
+
+\begingroup
+\footnotesize
+\setlength{\leftskip}{0.1in}
+\setlength{\parindent}{-0.1in}
+
+::: {#refs_selected}
+:::
+
+\endgroup 
+

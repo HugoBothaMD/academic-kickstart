@@ -1,0 +1,903 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+% Awesome CV LaTeX Template for CV/Resume
+%
+% This template has been downloaded from:
+% https://github.com/posquit0/Awesome-CV
+%
+% Author:
+% Claud D. Park <posquit0.bj@gmail.com>
+% http://www.posquit0.com
+%
+%
+% Adapted to be an Rmarkdown template by Mitchell O'Hara-Wild
+% 23 November 2018
+%
+% Template license:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+%
+%-------------------------------------------------------------------------------
+% CONFIGURATIONS
+%-------------------------------------------------------------------------------
+% A4 paper size by default, use 'letterpaper' for US letter
+\documentclass[11pt, a4paper]{awesome-cv}
+
+% Configure page margins with geometry
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+
+% Specify the location of the included fonts
+\fontdir[fonts/]
+
+% Color for highlights
+% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
+%                 awesome-nephritis, awesome-concrete, awesome-darknight
+
+\definecolor{awesome}{HTML}{414141}
+
+% Colors for text
+% Uncomment if you would like to specify your own color
+% \definecolor{darktext}{HTML}{414141}
+% \definecolor{text}{HTML}{333333}
+% \definecolor{graytext}{HTML}{5D5D5D}
+% \definecolor{lighttext}{HTML}{999999}
+
+% Set false if you don't want to highlight section with awesome color
+\setbool{acvSectionColorHighlight}{true}
+
+% If you would like to change the social information separator from a pipe (|) to something else
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+\def\endfirstpage{\newpage}
+
+%-------------------------------------------------------------------------------
+%	PERSONAL INFORMATION
+%	Comment any of the lines below if they are not required
+%-------------------------------------------------------------------------------
+% Available options: circle|rectangle,edge/noedge,left/right
+
+\photo{avatar.jpg}
+\name{Hugo}{Botha}
+
+\position{Assistant Professor}
+\address{Department of Neurology, Mayo Clinic}
+
+\email{\href{mailto:botha.hugo@mayo.edu}{\nolinkurl{botha.hugo@mayo.edu}}}
+\homepage{www.github.io/HugoBothaMD}
+\twitter{HugoBothaMD}
+
+% \gitlab{gitlab-id}
+% \stackoverflow{SO-id}{SO-name}
+% \skype{skype-id}
+% \reddit{reddit-id}
+
+
+\usepackage{booktabs}
+
+\providecommand{\tightlist}{%
+	\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+%------------------------------------------------------------------------------
+
+
+
+% Pandoc CSL macros
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{3em}
+\newenvironment{CSLReferences}[3] % #1 hanging-ident, #2 entry spacing
+ {% don't indent paragraphs
+  \setlength{\parindent}{0pt}
+  % turn on hanging indent if param 1 is 1
+  \ifodd #1 \everypar{\setlength{\hangindent}{\cslhangindent}}\ignorespaces\fi
+  % set entry spacing
+  \ifnum #2 > 0
+  \setlength{\parskip}{#2\baselineskip}
+  \fi
+ }%
+ {}
+\usepackage{calc}
+\newcommand{\CSLBlock}[1]{#1\hfill\break}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{#1}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{#1}}
+\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
+
+\begin{document}
+
+% Print the header with above personal informations
+% Give optional argument to change alignment(C: center, L: left, R: right)
+\makecvheader
+
+% Print the footer with 3 arguments(<left>, <center>, <right>)
+% Leave any of these blank if they are not needed
+% 2019-02-14 Chris Umphlett - add flexibility to the document name in footer, rather than have it be static Curriculum Vitae
+\makecvfooter
+  {February 2021}
+    {Hugo Botha~~~·~~~Curriculum Vitae}
+  {\thepage}
+
+
+%-------------------------------------------------------------------------------
+%	CV/RESUME CONTENT
+%	Each section is imported separately, open each file in turn to modify content
+%------------------------------------------------------------------------------
+
+
+
+\hypertarget{research-interests}{%
+\section{Research Interests}\label{research-interests}}
+
+\begingroup
+\small
+
+Neurodegenerative disease, Neuroimaging, Machine learning, Bayesian
+statistics
+
+\endgroup
+
+\hypertarget{education}{%
+\section{Education}\label{education}}
+
+\begin{cventries}
+    \cventry{Bachelor of Medicine Bachelor of Surgery (MBChB)}{University of Stellenbosch}{Cape Town, WC, SA}{01/2006-12/2011}{}\vspace{-4.0mm}
+    \cventry{Neurology Residency, Department of Neurology}{Mayo Clinic}{Rochester, MN, USA}{07/2012-06/2016}{}\vspace{-4.0mm}
+    \cventry{Behavioral Neurology Fellowship, Department of Neurology}{Mayo Clinic}{Rochester, MN, USA}{07/2016-06/2017}{}\vspace{-4.0mm}
+    \cventry{Clinician Investigator Program, Department of Radiology}{Mayo Clinic}{Rochester, MN, USA}{07/2017-06/2019}{}\vspace{-4.0mm}
+\end{cventries}
+
+\hypertarget{awards}{%
+\section{Awards}\label{awards}}
+
+\begin{cventries}
+    \cventry{University of Stellenbosch}{Rector’s Award for Excellent Achievement: Academics}{2011}{}{\begin{cvitems}
+\item Awarded for outstanding achievement in either academics, sport or culture
+\end{cvitems}}
+    \cventry{University of Stellenbosch}{Graduated with Honors}{2011}{}{}\vspace{-4.0mm}
+    \cventry{University of Stellenbosch}{Faculty of Health Sciences Medal for Best Graduating Student}{2011}{}{\begin{cvitems}
+\item Awarded to the best undergraduate student from the graduating classes in health and allied health sciences
+\end{cvitems}}
+    \cventry{Mayo Clinic}{Mayo Brother's Fellowship Award}{2016}{}{\begin{cvitems}
+\item Based on the qualities associated with the founders, including outstanding clinical performance, humanitarianism, and scholarly activity
+\end{cvitems}}
+    \cventry{Mayo Clinic}{Department of Neurology Research Award}{2016}{}{\begin{cvitems}
+\item Recognition of outstanding basic or clinical research during residency or
+fellowship
+\end{cvitems}}
+\end{cventries}
+
+\hypertarget{professional-memberships-and-activities}{%
+\section{Professional Memberships and
+Activities}\label{professional-memberships-and-activities}}
+
+\hypertarget{society-membership}{%
+\subsection{Society Membership}\label{society-membership}}
+
+\begin{cventries}
+    \cventry{Member}{American Academy of Neurology}{}{2013-present}{}\vspace{-4.0mm}
+    \cventry{Member}{International Society to Advance Alzheimer's Research and Treatment}{}{2017-present}{}\vspace{-4.0mm}
+    \cventry{Member}{Organization for Human Brain Mapping}{}{2017-present}{}\vspace{-4.0mm}
+    \cventry{Member}{International Society for Frontotemporal Dementias}{}{2020-present}{}\vspace{-4.0mm}
+    \cventry{Member}{Organization for Computational Neurosciences}{}{2020-present}{}\vspace{-4.0mm}
+\end{cventries}
+
+\hypertarget{professional-service}{%
+\subsection{Professional Service}\label{professional-service}}
+
+\begin{cventries}
+    \cventry{Course Monitor}{Conferences}{}{}{\begin{cvitems}
+\item American Academy of Neurology Annual Meeting (2016)
+\end{cvitems}}
+    \cventry{Abstract Reviewer}{}{}{}{\begin{cvitems}
+\item Alzheimer's Association International Conference (2018, 2019, 2020)
+\end{cvitems}}
+    \cventry{Ad Hoc Reviewer}{Journals}{}{}{\begin{cvitems}
+\item Alzheimer's Research \& Therapy
+\item Brain
+\item Human Brain Mapping
+\item JAMA Psychiatry
+\item Journal of Alzheimer's Disease
+\item Journal of the Neurological Sciences
+\item Mayo Clinic Proceedings
+\item Medical Image Analysis
+\item Nature: Scientific Reports
+\item Neurobiology of Aging
+\item NeuroImage: Clinical
+\item Neurology
+\item Neuropsychologia
+\item Parkinsonism and Related disorders
+\end{cvitems}}
+\end{cventries}
+
+\hypertarget{teaching}{%
+\section{Teaching}\label{teaching}}
+
+\hypertarget{internal-lectures}{%
+\subsection{Internal Lectures}\label{internal-lectures}}
+
+\begin{cventries}
+    \cventry{Basic Summer Lecture Series}{Neurology Residency Program}{}{}{\begin{cvitems}
+\item Bedside Cognitive Assessment (2018,2019,2020)
+\end{cvitems}}
+    \cventry{Neuroanatomy Course}{}{}{}{\begin{cvitems}
+\item Cortex I:  Cytoarchitecture and Organization (2019, 2020)
+\item Cortex II:  Lobes and Functions (2019, 2020)
+\end{cvitems}}
+\end{cventries}
+
+\hypertarget{internal-conferences}{%
+\subsection{Internal Conferences}\label{internal-conferences}}
+
+\begin{cventries}
+    \cventry{Grand Rounds}{Neurology Department}{}{}{\begin{cvitems}
+\item Neurology Clinicopathologic Conference - A young man with progressive language difficulty (2015)
+\end{cvitems}}
+    \cventry{Subspecialty Conference}{}{}{}{\begin{cvitems}
+\item  Left Speechless: Dealing with the word salad of progressive aphasia and apraxia of speech (2015)
+\item The left hand of neurology: sinistrality, hemispheric specialization and neurodegenerative disease (2017)
+\end{cvitems}}
+\end{cventries}
+
+\hypertarget{lay-public-focused-talks}{%
+\subsection{Lay Public Focused Talks}\label{lay-public-focused-talks}}
+
+\begin{cventries}
+    \cventry{Posterior Cortical Atrophy Education Seminar}{ADRC Patient-Caregiver Seminars}{}{}{\begin{cvitems}
+\item Making a Diagnosis
+\end{cvitems}}
+    \cventry{CBD and PSP Education Seminar}{}{}{}{\begin{cvitems}
+\item  Journey to the Diagnosis (2017)
+\end{cvitems}}
+    \cventry{Frontotemporal Dementia and Primary Progressive Aphasia Education Seminar}{}{}{}{\begin{cvitems}
+\item FTD/PPA: Making a Diagnosis (2017)
+\item FTD/PPA: Pathology and Pathophysiology (2017)
+\end{cvitems}}
+    \cventry{Chesley Center on Aging 2017 Dementia Care Conference}{Invited Talks}{}{}{\begin{cvitems}
+\item Latest Findings and Trends in Research (2017)
+\end{cvitems}}
+\end{cventries}
+
+\hypertarget{institutionaldepartmental-activities}{%
+\section{Institutional/Departmental
+Activities}\label{institutionaldepartmental-activities}}
+
+\hypertarget{active}{%
+\subsection{Active}\label{active}}
+
+\begin{cventries}
+    \cventry{Voting Member}{Neurology Research Committee}{2019 - Current}{}{}\vspace{-4.0mm}
+    \cventry{Deputy Director}{Neurology Artificial Intelligence Program}{2020 - Current}{}{}\vspace{-4.0mm}
+    \cventry{Deputy Director}{Behavioral Neurology Fellowship}{2020 - Current}{}{}\vspace{-4.0mm}
+    \cventry{Section Chair (Neurology)}{Machine Learning/Deep Learning Journal Club}{2020 - Current}{}{}\vspace{-4.0mm}
+\end{cventries}
+
+\hypertarget{prior}{%
+\subsection{Prior}\label{prior}}
+
+\begin{cventries}
+    \cventry{Prelim-year representative}{Mayo Internal Medicine Residents Council}{2012 - 2013}{}{}\vspace{-4.0mm}
+    \cventry{Voting Member}{Neurology Residency Recruitment Committee}{2014 - 2016}{}{}\vspace{-4.0mm}
+\end{cventries}
+
+\hypertarget{mentoring}{%
+\section{Mentoring}\label{mentoring}}
+
+\begin{cventries}
+    \cventry{Project: Delays in the diagnosis of PPAOS}{Johhny Dang (Medical student)}{2019 - Current}{}{\begin{cvitems}
+\item Abstract submitted to AAN 2021
+\item 
+Manuscript in preparation
+\end{cvitems}}
+    \cventry{Project: Neurologic causes for delusional infestation}{Zeynep Secking (Intern)}{2020 - Current}{}{\begin{cvitems}
+\item 
+Manuscript in preparation
+\end{cvitems}}
+    \cventry{Project: FDG-PET to predict decline in atypical Alzheimer's disease}{Ryan Coburn (Neurology Resident)}{2020 - Current}{}{\begin{cvitems}
+\item 
+Data collection in progress
+\end{cvitems}}
+\end{cventries}
+
+\hypertarget{research-funding}{%
+\section{Research funding}\label{research-funding}}
+
+\hypertarget{active-1}{%
+\subsection{Active}\label{active-1}}
+
+\begin{cventries}
+    \cventry{National Institute on Deafness and Other Communication Disorders}{The neurobiology of two distinct types of progressive apraxia of speech (Co-I)}{2017-2022}{R01 DC 14942}{}\vspace{-4.0mm}
+    \cventry{National Institute on Deafness and Other Communication Disorders}{Longitudinal multi-modality imaging in progressive apraxia of speech (Co-I)}{2018-2023}{R01 DC 12519}{}\vspace{-4.0mm}
+    \cventry{ National Institute on
+Aging}{ARTFL LEFFTDS Longitudinal Frontotemporal Lobar Degeneration (ALLFTD) (Co-I)}{2019-2024}{U19 AG 63911}{}\vspace{-4.0mm}
+    \cventry{National Institute of
+Neurological Disorders and Stroke}{Independent brain metabolic patterns in Progressive Supranuclear Palsy (Co-I)}{2020-2022}{R03 NS 114365}{}\vspace{-4.0mm}
+\end{cventries}
+
+\hypertarget{selected-presentations}{%
+\section{Selected Presentations}\label{selected-presentations}}
+
+\hypertarget{bibliography}{}
+\leavevmode\hypertarget{ref-Botha_FTD_2014}{}%
+Botha, H. (2014). \emph{Diffusion tensor imaging in primary progressive
+aphasia and apraxia of speech} {[}Poster{]}. International
+Frontotemporal Dementia Conference, Vancouver, BC, Canada.
+
+\leavevmode\hypertarget{ref-Botha_ANA_2015}{}%
+Botha, H. (2015). \emph{Category Specific Imaging Correlates in
+Neurodegenerative Anomia} {[}Poster{]}. American Neurologic Association
+Annual Meeting, Philadelphia, PA, USA.
+
+\leavevmode\hypertarget{ref-Botha_REST_2016}{}%
+Botha, H. (2016). \emph{Language network dysfunction in primary
+progressive apraxia of speech} {[}Poster{]}. Fifth Biennial Conference
+on Resting-State and Brain Connectivity, Vienna, Austria.
+
+\leavevmode\hypertarget{ref-Botha_HAI_2018}{}%
+Botha, H. (2018). \emph{FDG-PET in tau-negative amnestic dementia
+resembles that of autopsy proven hippocampal sclerosis} {[}Platform{]}.
+Human Amyloid Imaging, Miami, FL, USA.
+
+\leavevmode\hypertarget{ref-Botha_AIC_2018}{}%
+Botha, H. (2018). \emph{Variability in pDMN Connectivity and Relative
+Hubness in Amyloid-Negative Cognitively Normal Individuals Predicts
+Amyloid and Tau Deposition Patterns in Typical Alzheimerâ€™s Disease}
+{[}Poster{]}. Alzheimerâ€™s Association International Conference,
+Chicago, IL, USA.
+
+\leavevmode\hypertarget{ref-Botha_KI_2018}{}%
+Variability, H. (2018). \emph{A novel FDG-PET based marker of TDP-43 and
+hippocampal sclerosis pathology} {[}Platform{]}. 24th Mayo-KI Annual
+Scientific Research Meeting, Rochester, MN, USA.
+
+\leavevmode\hypertarget{ref-Botha_AIC_2019}{}%
+Botha, H. (2019). \emph{Brain States and Tau PET Patterns Interact
+across the Aging-Alzheimerâ€™s Continuum} {[}Poster{]}. Alzheimerâ€™s
+Association International Conference, Los Angeles, CA, USA.
+
+\leavevmode\hypertarget{ref-Botha_HAI_2019}{}%
+Botha, H. (2019). \emph{Data-driven characterization of cross-sectional
+and longitudinal molecular imaging in aging and Alzheimerâ€™s disease}
+{[}Platform{]}. Human Amyloid Imaging, Miami, FL, USA.
+
+\leavevmode\hypertarget{ref-Botha_ADRD_2019}{}%
+Botha, H. (2019). \emph{Linking Brain States to Molecular Pathology
+across the Aging-Alzheimerâ€™s Continuum} {[}Blitz-poster{]}. ADC Annual
+Conference, St Louis, MO, USA.
+
+\leavevmode\hypertarget{ref-Botha_AAIC_2020}{}%
+Botha, H. (2020). \emph{Disrupted brain dynamics across the
+Alzheimerâ€™s disease spectrum is related to tau accumulation}
+{[}Platform{]}. Alzheimerâ€™s Association International Conference,
+Virtual, originally planned for Amsterdam, NL.
+
+\hypertarget{selected-presentations-1}{%
+\section{Selected Presentations}\label{selected-presentations-1}}
+
+\begingroup
+\setlength{\parindent}{-0in}
+\setlength{\leftskip}{0in}
+\setlength{\rightskip}{0.1in}
+\footnotesize
+
+\hypertarget{refs_presentations}{}
+\leavevmode\hypertarget{ref-Botha_FTD_2014}{}%
+Botha, H. (2014). \emph{{Diffusion tensor imaging in primary progressive
+aphasia and apraxia of speech}} {[}Poster{]}. {International
+Frontotemporal Dementia Conference}, Vancouver, {BC}, {Canada}.
+
+\leavevmode\hypertarget{ref-Botha_ANA_2015}{}%
+Botha, H. (2015). \emph{{Category Specific Imaging Correlates in
+Neurodegenerative Anomia}} {[}Poster{]}. {American Neurologic
+Association Annual Meeting}, Philadelphia, {PA}, {USA}.
+
+\leavevmode\hypertarget{ref-Botha_REST_2016}{}%
+Botha, H. (2016). \emph{{Language network dysfunction in primary
+progressive apraxia of speech}} {[}Poster{]}. {Fifth Biennial Conference
+on Resting-State and Brain Connectivity}, Vienna, {Austria}.
+
+\leavevmode\hypertarget{ref-Botha_HAI_2018}{}%
+Botha, H. (2018). \emph{{FDG-PET in tau-negative amnestic dementia
+resembles that of autopsy proven hippocampal sclerosis}} {[}Platform{]}.
+{Human Amyloid Imaging}, Miami, {FL}, {USA}.
+
+\leavevmode\hypertarget{ref-Botha_AIC_2018}{}%
+Botha, H. (2018). \emph{{Variability in pDMN Connectivity and Relative
+Hubness in Amyloid-Negative Cognitively Normal Individuals Predicts
+Amyloid and Tau Deposition Patterns in Typical Alzheimer's Disease}}
+{[}Poster{]}. {Alzheimer's Association International Conference},
+Chicago, {IL}, {USA}.
+
+\leavevmode\hypertarget{ref-Botha_KI_2018}{}%
+Variability, H. (2018). \emph{{A novel FDG-PET based marker of TDP-43
+and hippocampal sclerosis pathology}} {[}Platform{]}. {24th Mayo-KI
+Annual Scientific Research Meeting}, Rochester, {MN}, {USA}.
+
+\leavevmode\hypertarget{ref-Botha_AIC_2019}{}%
+Botha, H. (2019). \emph{{Brain States and Tau PET Patterns Interact
+across the Aging-Alzheimer's Continuum}} {[}Poster{]}. {Alzheimer's
+Association International Conference}, Los Angeles, {CA}, {USA}.
+
+\leavevmode\hypertarget{ref-Botha_HAI_2019}{}%
+Botha, H. (2019). \emph{{Data-driven characterization of cross-sectional
+and longitudinal molecular imaging in aging and Alzheimer's disease}}
+{[}Platform{]}. {Human Amyloid Imaging}, Miami, {FL}, {USA}.
+
+\leavevmode\hypertarget{ref-Botha_ADRD_2019}{}%
+Botha, H. (2019). \emph{{Linking Brain States to Molecular Pathology
+across the Aging-Alzheimer's Continuum}} {[}Blitz-poster{]}. {ADC Annual
+Conference}, St Louis, {MO}, {USA}.
+
+\leavevmode\hypertarget{ref-Botha_AAIC_2020}{}%
+Botha, H. (2020). \emph{{Disrupted brain dynamics across the Alzheimer's
+disease spectrum is related to tau accumulation}} {[}Platform{]}.
+{Alzheimer's Association International Conference}, Virtual, originally
+planned for Amsterdam, {NL}.
+
+\endgroup
+
+\hypertarget{publications}{%
+\section{Publications}\label{publications}}
+
+\begingroup
+\setlength{\parindent}{-0in}
+\setlength{\leftskip}{0in}
+\setlength{\rightskip}{0.1in}
+\footnotesize
+
+\hypertarget{refs_published}{}
+\leavevmode\hypertarget{ref-botha_discourse_2011}{}%
+Botha, H., Schalkwyk, G. van, Bezuidenhout, J., \& Schalkwyk, S. van.
+(2011). Discourse of final-year medical students during clinical case
+presentations. \emph{African Journal of Health Professions Education},
+\emph{3}(1), 3--6.
+\url{https://www.ajol.info/index.php/ajhpe/article/view/69937}
+
+\leavevmode\hypertarget{ref-botha_reliability_2012}{}%
+Botha, H., Ackerman, C., Candy, S., Carr, J. A., Griffith-Richards, S.,
+\& Bateman, K. J. (2012). Reliability and {Diagnostic} {Performance} of
+{CT} {Imaging} {Criteria} in the {Diagnosis} of {Tuberculous}
+{Meningitis}. \emph{PLOS ONE}, \emph{7}(6), e38982.
+\url{https://doi.org/10.1371/journal.pone.0038982}
+
+\leavevmode\hypertarget{ref-van_schalkwyk_comparison_2012}{}%
+Schalkwyk, G. van, Botha, H., \& Seedat, S. (2012). Comparison of 2
+{Dementia} {Screeners}, the {Test} {Your} {Memory} {Test} and the
+{Mini}-{Mental} {State} {Examination}, in a {Primary} {Care} {Setting}.
+\emph{Journal of Geriatric Psychiatry and Neurology}, \emph{25}(2),
+85--88. \url{https://doi.org/10.1177/0891988712447895}
+
+\leavevmode\hypertarget{ref-botha_attention_2012}{}%
+Botha, H., \& Carr, J. (2012). Attention and visual dysfunction in
+{Parkinson}'s disease. \emph{Parkinsonism \& Related Disorders},
+\emph{18}(6), 742--747.
+\url{https://doi.org/10.1016/j.parkreldis.2012.03.004}
+
+\leavevmode\hypertarget{ref-botha_pimple_2014}{}%
+Botha, H., Whitwell, J. L., Madhaven, A., Senjem, M. L., Lowe, V., \&
+Josephs, K. A. (2014). The pimple sign of progressive supranuclear palsy
+syndrome. \emph{Parkinsonism \& Related Disorders}, \emph{20}(2),
+180--185. \url{https://doi.org/10.1016/j.parkreldis.2013.10.023}
+
+\leavevmode\hypertarget{ref-zalewski_fdg-pet_2014}{}%
+Zalewski, N., Botha, H., Whitwell, J. L., Lowe, V., Dickson, D. W., \&
+Josephs, K. A. (2014). {FDG}-{PET} in pathologically confirmed
+spontaneous {4R}-tauopathy variants. \emph{Journal of Neurology},
+\emph{261}(4), 710--716. \url{https://doi.org/10.1007/s00415-014-7256-4}
+
+\leavevmode\hypertarget{ref-botha_nonverbal_2014}{}%
+Botha, H., Duffy, J. R., Strand, E. A., Machulda, M. M., Whitwell, J.
+L., \& Josephs, K. A. (2014). Nonverbal oral apraxia in primary
+progressive aphasia and apraxia of speech. \emph{Neurology},
+\emph{82}(19), 1729--1735.
+\url{https://doi.org/10.1212/WNL.0000000000000412}
+
+\leavevmode\hypertarget{ref-martinez-thompson_clinical_2014}{}%
+Martinez-Thompson, J. M., Botha, H., \& Katz, B. S. (2014). Clinical
+{Reasoning}: {A} woman with subacute progressive confusion and gait
+instability. \emph{Neurology}, \emph{83}(5), e62--e67.
+\url{https://doi.org/10.1212/WNL.0000000000000648}
+
+\leavevmode\hypertarget{ref-botha_teaching_2014}{}%
+Botha, H., Moore, S. A., \& Rabinstein, A. A. (2014). Teaching
+{NeuroImages}: {Massive} cerebral edema after {CT} myelography: {An}
+optical illusion. \emph{Neurology}, \emph{83}(18), e170--e170.
+\url{https://doi.org/10.1212/WNL.0000000000000946}
+
+\leavevmode\hypertarget{ref-botha_classification_2015}{}%
+Botha, H., Duffy, J. R., Whitwell, J. L., Strand, E. A., Machulda, M.
+M., Schwarz, C. G., Reid, R. I., Spychalla, A. J., Senjem, M. L., Jones,
+D. T., Lowe, V., Jack, C. R., \& Josephs, K. A. (2015). Classification
+and clinicoradiologic features of primary progressive aphasia ({PPA})
+and apraxia of speech. \emph{Cortex}, \emph{69}, 220--236.
+\url{https://doi.org/10.1016/j.cortex.2015.05.013}
+
+\leavevmode\hypertarget{ref-botha_young_2016}{}%
+Botha, H., Boeve, B. F., Jones, L. K., Parisi, J. E., \& Klaas, J. P.
+(2016). A {Young} {Man} {With} {Progressive} {Language} {Difficulty} and
+{Early}-{Onset} {Dementia}. \emph{JAMA Neurology}, \emph{73}(5),
+595--599. \url{https://doi.org/10.1001/jamaneurol.2016.0246}
+
+\leavevmode\hypertarget{ref-yost_facial_2017}{}%
+Yost, M. D., Chou, C. Z., Botha, H., Block, M. S., \& Liewluck, T.
+(2017). Facial diplegia after pembrolizumab treatment. \emph{Muscle \&
+Nerve}, \emph{56}(3), E20--E21. \url{https://doi.org/10.1002/mus.25663}
+
+\leavevmode\hypertarget{ref-cohen_neurodebian_2017}{}%
+Cohen, A., Kenney-Jung, D., Botha, H., \& Tillema, J.-M. (2017).
+{NeuroDebian} {Virtual} {Machine} {Deployment} {Facilitates}
+{Trainee}-{Driven} {Bedside} {Neuroimaging} {Research}. \emph{Journal of
+Child Neurology}, \emph{32}(1), 29--34.
+\url{https://doi.org/10.1177/0883073816668113}
+
+\leavevmode\hypertarget{ref-botha_novel_2017}{}%
+Botha, H., Finch, N. A., Gavrilova, R. H., Machulda, M. M., Fields, J.
+A., Lowe, V. J., Petersen, R. C., Jack, C. R., Dheel, C. M., Gearhart,
+D. J., Knopman, D. S., Rademakers, R., \& Boeve, B. F. (2017). Novel
+{GRN} mutation presenting as an aphasic dementia and evolving into
+corticobasal syndrome. \emph{Neurology Genetics}, \emph{3}(6), e201.
+\url{https://doi.org/10.1212/NXG.0000000000000201}
+
+\leavevmode\hypertarget{ref-jones_tau_2017}{}%
+Jones, D. T., Graff-Radford, J., Lowe, V. J., Wiste, H. J., Gunter, J.
+L., Senjem, M. L., Botha, H., Kantarci, K., Boeve, B. F., Knopman, D.
+S., Petersen, R. C., \& Jack, C. R. (2017). Tau, amyloid, and cascading
+network failure across the {Alzheimer}'s disease spectrum.
+\emph{Cortex}, \emph{97}, 143--159.
+\url{https://doi.org/10.1016/j.cortex.2017.09.018}
+
+\leavevmode\hypertarget{ref-josephs_18fav-1451_2018}{}%
+Josephs, K. A., Martin, P. R., Botha, H., Schwarz, C. G., Duffy, J. R.,
+Clark, H. M., Machulda, M. M., Graff-Radford, J., Weigand, S. D.,
+Senjem, M. L., Utianski, R. L., Drubach, D. A., Boeve, B. F., Jones, D.
+T., Knopman, D. S., Petersen, R. C., Jack, C. R., Lowe, V. J., \&
+Whitwell, J. L. (2018). {[}{18F}{]}{AV}-1451 tau-{PET} and primary
+progressive aphasia. \emph{Annals of Neurology}, \emph{83}(3), 599--611.
+\url{https://doi.org/10.1002/ana.25183}
+
+\leavevmode\hypertarget{ref-utianski_tau_2018}{}%
+Utianski, R. L., Whitwell, J. L., Schwarz, C. G., Duffy, J. R., Botha,
+H., Clark, H. M., Machulda, M. M., Senjem, M. L., Knopman, D. S.,
+Petersen, R. C., Jack, C. R., Lowe, V. J., \& Josephs, K. A. (2018). Tau
+uptake in agrammatic primary progressive aphasia with and without
+apraxia of speech. \emph{European Journal of Neurology}, \emph{25}(11),
+1352--1357. \url{https://doi.org/10.1111/ene.13733}
+
+\leavevmode\hypertarget{ref-botha_disrupted_2018}{}%
+Botha, H., Utianski, R. L., Whitwell, J. L., Duffy, J. R., Clark, H. M.,
+Strand, E. A., Machulda, M. M., Tosakulwong, N., Knopman, D. S.,
+Petersen, R. C., Jack, C. R., Josephs, K. A., \& Jones, D. T. (2018).
+Disrupted functional connectivity in primary progressive apraxia of
+speech. \emph{NeuroImage: Clinical}, \emph{18}, 617--629.
+\url{https://doi.org/10.1016/j.nicl.2018.02.036}
+
+\leavevmode\hypertarget{ref-townley_18f-fdg_2018}{}%
+Townley, R. A., Botha, H., Graff-Radford, J., Boeve, B. F., Petersen, R.
+C., Senjem, M. L., Knopman, D. S., Lowe, V., Jack, C. R., \& Jones, D.
+T. (2018). {18F}-{FDG} {PET}-{CT} pattern in idiopathic normal pressure
+hydrocephalus. \emph{NeuroImage: Clinical}, \emph{18}, 897--902.
+\url{https://doi.org/10.1016/j.nicl.2018.02.031}
+
+\leavevmode\hypertarget{ref-botha_tau-negative_2018}{}%
+Botha, H., Mantyh, W. G., Graff-Radford, J., Machulda, M. M.,
+Przybelski, S. A., Wiste, H. J., Senjem, M. L., Parisi, J. E., Petersen,
+R. C., Murray, M. E., Boeve, B. F., Lowe, V. J., Knopman, D. S., Jack,
+C. R., \& Jones, D. T. (2018). Tau-negative amnestic dementia
+masquerading as {Alzheimer} disease dementia. \emph{Neurology},
+\emph{90}(11), e940--e946.
+\url{https://doi.org/10.1212/WNL.0000000000005124}
+
+\leavevmode\hypertarget{ref-tetzloff_clinical_2018}{}%
+Tetzloff, K. A., Duffy, J. R., Strand, E. A., Machulda, M. M., Boland,
+S. M., Utianski, R. L., Botha, H., Senjem, M. L., Schwarz, C. G.,
+Josephs, K. A., \& Whitwell, J. L. (2018). Clinical and imaging
+progression over 10 years in a patient with primary progressive apraxia
+of speech and autopsy-confirmed corticobasal degeneration.
+\emph{Neurocase}, \emph{24}(2), 111--120.
+\url{https://doi.org/10.1080/13554794.2018.1477963}
+
+\leavevmode\hypertarget{ref-botha_fdg-pet_2018}{}%
+Botha, H., Mantyh, W. G., Murray, M. E., Knopman, D. S., Przybelski, S.
+A., Wiste, H. J., Graff-Radford, J., Josephs, K. A., Schwarz, C. G.,
+Kremers, W. K., Boeve, B. F., Petersen, R. C., Machulda, M. M., Parisi,
+J. E., Dickson, D. W., Lowe, V., Jack, C. R., \& Jones, D. T. (2018).
+{FDG}-{PET} in tau-negative amnestic dementia resembles that of
+autopsy-proven hippocampal sclerosis. \emph{Brain}, \emph{141}(4),
+1201--1217. \url{https://doi.org/10.1093/brain/awy049}
+
+\leavevmode\hypertarget{ref-botha_non-right_2018}{}%
+Botha, H., Duffy, J. R., Whitwell, J. L., Strand, E. A., Machulda, M.
+M., Spychalla, A. J., Tosakulwong, N., Senjem, M. L., Knopman, D. S.,
+Petersen, R. C., Jack, C. R., Lowe, V. J., \& Josephs, K. A. (2018).
+Non-right handed primary progressive apraxia of speech. \emph{Journal of
+the Neurological Sciences}, \emph{390}, 246--254.
+\url{https://doi.org/10.1016/j.jns.2018.05.007}
+
+\leavevmode\hypertarget{ref-utianski_prosodic_2018}{}%
+Utianski, R. L., Duffy, J. R., Clark, H. M., Strand, E. A., Botha, H.,
+Schwarz, C. G., Machulda, M. M., Senjem, M. L., Spychalla, A. J., Jack,
+C. R., Petersen, R. C., Lowe, V. J., Whitwell, J. L., \& Josephs, K. A.
+(2018). Prosodic and phonetic subtypes of primary progressive apraxia of
+speech. \emph{Brain and Language}, \emph{184}, 54--65.
+\url{https://doi.org/10.1016/j.bandl.2018.06.004}
+
+\leavevmode\hypertarget{ref-jones_amyloid-_2018}{}%
+Jones, D. T., Townley, R. A., Graff-Radford, J., Botha, H., Knopman, D.
+S., Petersen, R. C., Jack, C. R., Lowe, V. J., \& Boeve, B. F. (2018).
+Amyloid- and tau-{PET} imaging in a familial prion kindred.
+\emph{Neurology Genetics}, \emph{4}(6), e290.
+\url{https://doi.org/10.1212/NXG.0000000000000290}
+
+\leavevmode\hypertarget{ref-utianski_rapid_2018}{}%
+Utianski, R. L., Botha, H., Duffy, J. R., Clark, H. M., Martin, P. R.,
+Butts, A. M., Machulda, M. M., Whitwell, J. L., \& Josephs, K. A.
+(2018). Rapid rate on quasi-speech tasks in the semantic variant of
+primary progressive aphasia: {A} non-motor phenomenon? \emph{The Journal
+of the Acoustical Society of America}, \emph{144}(6), 3364--3370.
+\url{https://doi.org/10.1121/1.5082210}
+
+\leavevmode\hypertarget{ref-ali_utility_2019}{}%
+Ali, F., Botha, H., Whitwell, J. L., \& Josephs, K. A. (2019). Utility
+of the {Movement} {Disorders} {Society} {Criteria} for {Progressive}
+{Supranuclear} {Palsy} in {Clinical} {Practice}. \emph{Movement
+Disorders Clinical Practice}, \emph{6}(6), 436--439.
+\url{https://doi.org/10.1002/mdc3.12807}
+
+\leavevmode\hypertarget{ref-ali_sensitivity_2019}{}%
+Ali, F., Martin, P. R., Botha, H., Ahlskog, J. E., Bower, J. H.,
+Masumoto, J. Y., Maraganore, D., Hassan, A., Eggers, S., Boeve, B. F.,
+Knopman, D. S., Drubach, D., Petersen, R. C., Dunkley, E. D., Gerpen, J.
+van, Uitti, R., Whitwell, J. L., Dickson, D. W., \& Josephs, K. A.
+(2019). Sensitivity and {Specificity} of {Diagnostic} {Criteria} for
+{Progressive} {Supranuclear} {Palsy}. \emph{Movement Disorders},
+\emph{34}(8), 1144--1153. \url{https://doi.org/10.1002/mds.27619}
+
+\leavevmode\hypertarget{ref-whitwell_evaluation_2019}{}%
+Whitwell, J. L., Stevens, C. A., Duffy, J. R., Clark, H. M., Machulda,
+M. M., Strand, E. A., Martin, P. R., Utianski, R. L., Botha, H.,
+Spychalla, A. J., Senjem, M. L., Schwarz, C. G., Jack, C. R., Ali, F.,
+Hassan, A., \& Josephs, K. A. (2019). An {Evaluation} of the
+{Progressive} {Supranuclear} {Palsy} {Speech}/{Language} {Variant}.
+\emph{Movement Disorders Clinical Practice}, \emph{6}(6), 452--461.
+\url{https://doi.org/10.1002/mdc3.12796}
+
+\leavevmode\hypertarget{ref-whitwell_mri_2019}{}%
+Whitwell, J. L., Tosakulwong, N., Schwarz, C. G., Botha, H., Senjem, M.
+L., Spychalla, A. J., Ahlskog, J. E., Knopman, D. S., Petersen, R. C.,
+Jack, C. R., Lowe, V. J., \& Josephs, K. A. (2019). {MRI} {Outperforms}
+{[}{18F}{]}{AV}-1451 {PET} as a {Longitudinal} {Biomarker} in
+{Progressive} {Supranuclear} {Palsy}. \emph{Movement Disorders},
+\emph{34}(1), 105--113. \url{https://doi.org/10.1002/mds.27546}
+
+\leavevmode\hypertarget{ref-graff-radford_cerebral_2019}{}%
+Graff-Radford, J., Botha, H., Rabinstein, A. A., Gunter, J. L.,
+Przybelski, S. A., Lesnick, T., Huston, J., Flemming, K. D., Preboske,
+G. M., Senjem, M. L., Brown, R. D., Mielke, M. M., Roberts, R. O., Lowe,
+V. J., Knopman, D. S., Petersen, R. C., Kremers, W., Vemuri, P., Jack,
+C. R., \& Kantarci, K. (2019). Cerebral microbleeds: {Prevalence} and
+relationship to amyloid burden. \emph{Neurology}, \emph{92}(3),
+e253--e262. \url{https://doi.org/10.1212/WNL.0000000000006780}
+
+\leavevmode\hypertarget{ref-botha_primary_2019}{}%
+Botha, H., \& Josephs, K. A. (2019). Primary {Progressive} {Aphasias}
+and {Apraxia} of {Speech}: \emph{CONTINUUM: Lifelong Learning in
+Neurology}, \emph{25}(1), 101--127.
+\url{https://doi.org/10.1212/CON.0000000000000699}
+
+\leavevmode\hypertarget{ref-whitwell_influence_2019}{}%
+Whitwell, J. L., Martin, P. R., Duffy, J. R., Clark, H. M., Machulda, M.
+M., Schwarz, C. G., Weigand, S. D., Sintini, I., Senjem, M. L.,
+Ertekin-Taner, N., Botha, H., Utianski, R. L., Graff-Radford, J., Jones,
+D. T., Boeve, B. F., Knopman, D. S., Petersen, R. C., Jack, C. R., Lowe,
+V. J., \& Josephs, K. A. (2019). The influence of \(\beta\)-amyloid on
+{[} \(^{\textrm{18}}\) {F}{]}{AV}-1451 in semantic variant of primary
+progressive aphasia. \emph{Neurology}, \emph{92}(7), e710--e722.
+\url{https://doi.org/10.1212/WNL.0000000000006913}
+
+\leavevmode\hypertarget{ref-tetzloff_progressive_2019}{}%
+Tetzloff, K. A., Duffy, J. R., Clark, H. M., Utianski, R. L., Strand, E.
+A., Machulda, M. M., Botha, H., Martin, P. R., Schwarz, C. G., Senjem,
+M. L., Reid, R. I., Gunter, J. L., Spychalla, A. J., Knopman, D. S.,
+Petersen, R. C., Jack, C. R., Lowe, V. J., Josephs, K. A., \& Whitwell,
+J. L. (2019). Progressive agrammatic aphasia without apraxia of speech
+as a distinct syndrome. \emph{Brain}, \emph{142}(8), 2466--2482.
+\url{https://doi.org/10.1093/brain/awz157}
+
+\leavevmode\hypertarget{ref-townley_comparison_2019}{}%
+Townley, R. A., Syrjanen, J. A., Botha, H., Kremers, W. K., Aakre, J.
+A., Fields, J. A., Machulda, M. M., Graff-Radford, J., Savica, R.,
+Jones, D. T., Knopman, D. S., Petersen, R. C., \& Boeve, B. F. (2019).
+Comparison of the {Short} {Test} of {Mental} {Status} and the {Montreal}
+{Cognitive} {Assessment} {Across} the {Cognitive} {Spectrum}. \emph{Mayo
+Clinic Proceedings}, \emph{94}(8), 1516--1523.
+\url{https://doi.org/10.1016/j.mayocp.2019.01.043}
+
+\leavevmode\hypertarget{ref-sintini_multimodal_2019}{}%
+Sintini, I., Schwarz, C. G., Senjem, M. L., Reid, R. I., Botha, H., Ali,
+F., Ahlskog, J. E., Jack, C. R., Lowe, V. J., Josephs, K. A., \&
+Whitwell, J. L. (2019). Multimodal neuroimaging relationships in
+progressive supranuclear palsy. \emph{Parkinsonism \& Related
+Disorders}, \emph{66}, 56--61.
+\url{https://doi.org/10.1016/j.parkreldis.2019.07.001}
+
+\leavevmode\hypertarget{ref-jack_bivariate_2019}{}%
+Jack, C. R., Wiste, H. J., Botha, H., Weigand, S. D., Therneau, T. M.,
+Knopman, D. S., Graff-Radford, J., Jones, D. T., Ferman, T. J., Boeve,
+B. F., Kantarci, K., Lowe, V. J., Vemuri, P., Mielke, M. M., Fields, J.
+A., Machulda, M. M., Schwarz, C. G., Senjem, M. L., Gunter, J. L., \&
+Petersen, R. C. (2019). The bivariate distribution of amyloid-\(\beta\)
+and tau: Relationship with established neurocognitive clinical
+syndromes. \emph{Brain}, \emph{142}(10), 3230--3242.
+\url{https://doi.org/10.1093/brain/awz268}
+
+\leavevmode\hypertarget{ref-utianski_clinical_2019}{}%
+Utianski, R. L., Botha, H., Martin, P. R., Schwarz, C. G., Duffy, J. R.,
+Clark, H. M., Machulda, M. M., Butts, A. M., Lowe, V. J., Jack, C. R.,
+Senjem, M. L., Spychalla, A. J., Whitwell, J. L., \& Josephs, K. A.
+(2019). Clinical and neuroimaging characteristics of clinically
+unclassifiable primary progressive aphasia. \emph{Brain and Language},
+\emph{197}, 104676. \url{https://doi.org/10.1016/j.bandl.2019.104676}
+
+\leavevmode\hypertarget{ref-bejanin_antemortem_2019}{}%
+Bejanin, A., Murray, M. E., Martin, P., Botha, H., Tosakulwong, N.,
+Schwarz, C. G., Senjem, M. L., Chételat, G., Kantarci, K., Jack, C. R.,
+Boeve, B. F., Knopman, D. S., Petersen, R. C., Giannini, C., Parisi, J.
+E., Dickson, D. W., Whitwell, J. L., \& Josephs, K. A. (2019).
+Antemortem volume loss mirrors {TDP}-43 staging in older adults with
+non-frontotemporal lobar degeneration. \emph{Brain}, \emph{142}(11),
+3621--3635. \url{https://doi.org/10.1093/brain/awz277}
+
+\leavevmode\hypertarget{ref-townley_progressive_2020}{}%
+Townley, R. A., Graff-Radford, J., Mantyh, W. G., Botha, H., Polsinelli,
+A. J., Przybelski, S. A., Machulda, M. M., Makhlouf, A. T., Senjem, M.
+L., Murray, M. E., Reichard, R. R., Savica, R., Boeve, B. F., Drubach,
+D. A., Josephs, K. A., Knopman, D. S., Lowe, V. J., Jack, C. R.,
+Petersen, R. C., \& Jones, D. T. (2020). Progressive dysexecutive
+syndrome due to {Alzheimer}{'}s disease: A description of 55 cases and
+comparison to other phenotypes. \emph{Brain Communications},
+\emph{2}(1), fcaa068. \url{https://doi.org/10.1093/braincomms/fcaa068}
+
+\leavevmode\hypertarget{ref-whitwell_brain_2020}{}%
+Whitwell, J. L., Tosakulwong, N., Botha, H., Ali, F., Clark, H. M.,
+Duffy, J. R., Utianski, R. L., Stevens, C. A., Weigand, S. D., Schwarz,
+C. G., Senjem, M. L., Jack, C. R., Lowe, V. J., Ahlskog, J. E., Dickson,
+D. W., \& Josephs, K. A. (2020). Brain volume and flortaucipir analysis
+of progressive supranuclear palsy clinical variants. \emph{NeuroImage:
+Clinical}, \emph{25}, 102152.
+\url{https://doi.org/10.1016/j.nicl.2019.102152}
+
+\leavevmode\hypertarget{ref-whitwell_longitudinal_2020}{}%
+Whitwell, J. L., Tosakulwong, N., Weigand, S. D., Graff-Radford, J.,
+Duffy, J. R., Clark, H. M., Machulda, M. M., Botha, H., Utianski, R. L.,
+Schwarz, C. G., Senjem, M. L., Strand, E. A., Ertekin-Taner, N., Jack
+Jr, C. R., Lowe, V. J., \& Josephs, K. A. (2020). Longitudinal
+{Amyloid}-\(\beta\) {PET} in {Atypical} {Alzheimer}{'}s {Disease} and
+{Frontotemporal} {Lobar} {Degeneration}. \emph{Journal of Alzheimer's
+Disease}, \emph{74}(1), 377--389.
+\url{https://doi.org/10.3233/JAD-190699}
+
+\leavevmode\hypertarget{ref-clark_heather_m_western_2020}{}%
+Clark Heather M., Utianski Rene L., Duffy Joseph R., Strand Edythe A.,
+Botha Hugo, Josephs Keith A., \& Whitwell Jennifer L. (2020). Western
+{Aphasia} {Battery}{-}{Revised} {Profiles} in {Primary} {Progressive}
+{Aphasia} and {Primary} {Progressive} {Apraxia} of {Speech}.
+\emph{American Journal of Speech-Language Pathology}, \emph{29}(1S),
+498--510. \url{https://doi.org/10.1044/2019_AJSLP-CAC48-18-0217}
+
+\leavevmode\hypertarget{ref-utianski_longitudinal_2020}{}%
+Utianski, R. L., Martin, P. R., Botha, H., Schwarz, C. G., Duffy, J. R.,
+Petersen, R. C., Knopman, D. S., Clark, H. M., Butts, A. M., Machulda,
+M. M., Jack, C. R., Lowe, V. J., Whitwell, J. L., \& Josephs, K. A.
+(2020). Longitudinal flortaucipir ({[}{18F}{]}{AV}-1451) {PET} imaging
+in primary progressive apraxia of speech. \emph{Cortex}, \emph{124},
+33--43. \url{https://doi.org/10.1016/j.cortex.2019.11.002}
+
+\leavevmode\hypertarget{ref-boes_dementia_2020}{}%
+Boes, S., Botha, H., Machulda, M., Lowe, V., Graff-Radford, J.,
+Whitwell, J. L., Utianski, R. L., Duffy, J. R., \& Josephs, K. A.
+(2020). Dementia with {Lewy} bodies presenting as {Logopenic} variant
+primary progressive {Aphasia}. \emph{Neurocase}, \emph{0}(0), 1--5.
+\url{https://doi.org/10.1080/13554794.2020.1795204}
+
+\leavevmode\hypertarget{ref-buciuc_utility_2020}{}%
+Buciuc, M., Botha, H., Murray, M. E., Schwarz, C. G., Senjem, M. L.,
+Jones, D. T., Knopman, D. S., Boeve, B. F., Petersen, R. C., Jack, C.
+R., Petrucelli, L., Parisi, J. E., Dickson, D. W., Lowe, V., Whitwell,
+J. L., \& Josephs, K. A. (2020). Utility of {FDG}-{PET} in diagnosis of
+{Alzheimer}-related {TDP}-43 proteinopathy. \emph{Neurology},
+\emph{95}(1), e23--e34.
+\url{https://doi.org/10.1212/WNL.0000000000009722}
+
+\leavevmode\hypertarget{ref-clark_dysphagia_2020}{}%
+Clark, H. M., Stierwalt, J. A. G., Tosakulwong, N., Botha, H., Ali, F.,
+Whitwell, J. L., \& Josephs, K. A. (2020). Dysphagia in {Progressive}
+{Supranuclear} {Palsy}. \emph{Dysphagia}, \emph{35}(4), 667--676.
+\url{https://doi.org/10.1007/s00455-019-10073-2}
+
+\leavevmode\hypertarget{ref-ghirelli_sensitivity-specificity_2020}{}%
+Ghirelli, A., Tosakulwong, N., Weigand, S. D., Clark, H. M., Ali, F.,
+Botha, H., Duffy, J. R., Utianski, R. L., Buciuc, M., Murray, M. E.,
+Labuzan, S. A., Spychalla, A. J., Pham, N. T. T., Schwarz, C. G.,
+Senjem, M. L., Machulda, M. M., Baker, M., Rademakers, R., Filippi, M.,
+\ldots{} Whitwell, J. L. (2020). Sensitivity-{Specificity} of {Tau} and
+{Amyloid} \(\beta\) {Positron} {Emission} {Tomography} in
+{Frontotemporal} {Lobar} {Degeneration}. \emph{Annals of Neurology}.
+\url{https://doi.org/10.1002/ana.25893}
+
+\leavevmode\hypertarget{ref-utianski_longitudinal_2020-1}{}%
+Utianski, R. L., Botha, H., Whitwell, J. L., Martin, P. R., Schwarz, C.
+G., Duffy, J. R., Clark, H. M., Spychalla, A. J., Senjem, M. L.,
+Petersen, R. C., Knopman, D. S., Jack, C. R., Lowe, V. J., \& Josephs,
+K. A. (2020). Longitudinal flortaucipir ({[}{18F}{]}{AV}-1451) {PET}
+uptake in semantic dementia. \emph{Neurobiology of Aging}, \emph{92},
+135--140. \url{https://doi.org/10.1016/j.neurobiolaging.2020.04.010}
+
+\leavevmode\hypertarget{ref-whitwell_survival_2020}{}%
+Whitwell, J. L., Martin, P., Duffy, J. R., Clark, H. M., Utianski, R.
+L., Botha, H., Machulda, M. M., Strand, E. A., \& Josephs, K. A. (2020).
+Survival analysis in primary progressive apraxia of speech and
+agrammatic aphasia. \emph{Neurology: Clinical Practice},
+10.1212/CPJ.0000000000000919.
+\url{https://doi.org/10.1212/CPJ.0000000000000919}
+
+\leavevmode\hypertarget{ref-seckin_ioflupane_2020}{}%
+Seckin, Z. I., Whitwell, J. L., Utianski, R. L., Botha, H., Ali, F.,
+Duffy, J. R., Clark, H. M., Machulda, M. M., Jordan, L. G., Min, H.-K.,
+Lowe, V. J., \& Josephs, K. A. (2020). Ioflupane {123I} ({DAT} scan)
+{SPECT} identifies dopamine receptor dysfunction early in the disease
+course in progressive apraxia of speech. \emph{Journal of Neurology},
+\emph{267}(9), 2603--2611.
+\url{https://doi.org/10.1007/s00415-020-09883-4}
+
+\leavevmode\hypertarget{ref-cogswell_associations_2020}{}%
+Cogswell, P. M., Wiste, H. J., Senjem, M. L., Gunter, J. L., Weigand, S.
+D., Schwarz, C. G., Arani, A., Therneau, T. M., Lowe, V. J., Knopman, D.
+S., Botha, H., Graff-Radford, J., Jones, D. T., Kantarci, K., Vemuri,
+P., Boeve, B. F., Mielke, M. M., Petersen, R. C., \& Jack, C. R. (2020).
+Associations of {Quantitative} {Susceptibility} {Mapping} with
+{Alzheimer}'s {Disease} {Clinical} and {Imaging} {Markers}.
+\emph{NeuroImage}, 117433.
+\url{https://doi.org/10.1016/j.neuroimage.2020.117433}
+
+\leavevmode\hypertarget{ref-jack_predicting_2020}{}%
+Jack, C. R., Wiste, H. J., Weigand, S. D., Therneau, T. M., Lowe, V. J.,
+Knopman, D. S., Botha, H., Graff-Radford, J., Jones, D. T., Ferman, T.
+J., Boeve, B. F., Kantarci, K., Vemuri, P., Mielke, M. M., Whitwell, J.,
+Josephs, K., Schwarz, C. G., Senjem, M. L., Gunter, J. L., \& Petersen,
+R. C. (2020). Predicting future rates of tau accumulation on {PET}.
+\emph{Brain : A Journal of Neurology}, \emph{143}(10), 3136--3150.
+\url{https://doi.org/10.1093/brain/awaa248}
+
+\leavevmode\hypertarget{ref-seckin_evolution_2020}{}%
+Seckin, Z. I., Duffy, J. R., Strand, E. A., Clark, H. M., Utianski, R.
+L., Machulda, M. M., Botha, H., Ali, F., Thu Pham, N. T., Lowe, V. J.,
+Whitwell, J. L., \& Josephs, K. A. (2020). The evolution of parkinsonism
+in primary progressive apraxia of speech: {A} 6-year longitudinal study.
+\emph{Parkinsonism \& Related Disorders}, \emph{81}, 34--40.
+\url{https://doi.org/10.1016/j.parkreldis.2020.09.039}
+
+\leavevmode\hypertarget{ref-sintini_tau_2020}{}%
+Sintini, I., Graff-Radford, J., Jones, D. T., Botha, H., Martin, P. R.,
+Machulda, M. M., Schwarz, C. G., Senjem, M. L., Gunter, J. L., Jack, C.
+R., Lowe, V. J., Josephs, K. A., \& Whitwell, J. L. (2020). Tau and
+{Amyloid} {Relationships} with {Resting}-state {Functional}
+{Connectivity} in {Atypical} {Alzheimer}'s {Disease}. \emph{Cerebral
+Cortex (New York, N.Y. : 1991)}.
+\url{https://doi.org/10.1093/cercor/bhaa319}
+
+\leavevmode\hypertarget{ref-utianski_communication_2020}{}%
+Utianski, R. L., Clark, H. M., Duffy, J. R., Botha, H., Whitwell, J. L.,
+\& Josephs, K. A. (2020). Communication {Limitations} in {Patients}
+{With} {Progressive} {Apraxia} of {Speech} and {Aphasia}. \emph{American
+Journal of Speech-Language Pathology}, \emph{29}(4), 1976--1986.
+\url{https://doi.org/10.1044/2020_AJSLP-20-00012}
+
+\leavevmode\hypertarget{ref-utianski_longitudinal_2021}{}%
+Utianski, R. L., Martin, P. R., Hanley, H., Duffy, J. R., Botha, H.,
+Clark, H. M., Whitwell, J. L., \& Josephs, K. A. (2021). A
+{Longitudinal} {Evaluation} of {Speech} {Rate} in {Primary}
+{Progressive} {Apraxia} of {Speech}. \emph{Journal of Speech, Language,
+and Hearing Research : JSLHR}, 1--13.
+\url{https://doi.org/10.1044/2020_JSLHR-20-00253}
+
+\endgroup
+
+\end{document}

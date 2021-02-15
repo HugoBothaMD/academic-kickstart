@@ -1,0 +1,21 @@
+
+# Research funding
+
+## Active
+```{r}
+tribble(
+  ~Year, ~Name, ~FundingSource,~GrantNo,
+  "2017-2022", "The neurobiology of two distinct types of progressive apraxia of speech (Co-I)", "National Institute on Deafness and Other Communication Disorders", "R01 DC 14942",
+  "2018-2023", "Longitudinal multi-modality imaging in progressive apraxia of speech (Co-I)", "National Institute on Deafness and Other Communication Disorders", "R01 DC 12519",
+  "2019-2024", "ARTFL LEFFTDS Longitudinal Frontotemporal Lobar Degeneration (ALLFTD) (Co-I)", " National Institute on
+Aging", "U19 AG 63911",
+  "2020-2022", "Independent brain metabolic patterns in Progressive Supranuclear Palsy (Co-I)", "National Institute of
+Neurological Disorders and Stroke", "R03 NS 114365"
+) %>% 
+  detailed_entries(
+    where = Year,
+    with = Name, 
+    what = FundingSource,
+    when = GrantNo
+  )
+```

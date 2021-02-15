@@ -1,0 +1,46 @@
+# Professional Memberships and Activities
+
+## Society Membership
+```{r}
+tribble(
+  ~Year, ~Name, ~Role,
+  "2013-present", "American Academy of Neurology", "Member",
+  "2017-present", "International Society to Advance Alzheimer's Research and Treatment", "Member",
+  "2017-present", "Organization for Human Brain Mapping", "Member",
+  "2020-present", "International Society for Frontotemporal Dementias", "Member",
+  "2020-present", "Organization for Computational Neurosciences", "Member"
+) %>% 
+  detailed_entries(
+    when = Year,
+    with = Name, 
+    what = Role
+  )
+```
+
+## Professional Service
+```{r}
+tribble(
+  ~Type, ~Name, ~Role,
+  "Conferences","American Academy of Neurology Annual Meeting (2016)", "Course Monitor",
+  NA,"Alzheimer's Association International Conference (2018, 2019, 2020)",  "Abstract Reviewer",
+  "Journals", "Alzheimer's Research & Therapy","Ad Hoc Reviewer",
+  "Journals", "Brain","Ad Hoc Reviewer",
+  "Journals", "Human Brain Mapping","Ad Hoc Reviewer",
+  "Journals", "JAMA Psychiatry","Ad Hoc Reviewer",
+  "Journals", "Journal of Alzheimer's Disease","Ad Hoc Reviewer",
+  "Journals", "Journal of the Neurological Sciences","Ad Hoc Reviewer",
+  "Journals", "Mayo Clinic Proceedings","Ad Hoc Reviewer",
+  "Journals", "Medical Image Analysis","Ad Hoc Reviewer",
+  "Journals", "Nature: Scientific Reports","Ad Hoc Reviewer",
+  "Journals", "Neurobiology of Aging","Ad Hoc Reviewer",
+  "Journals", "NeuroImage: Clinical","Ad Hoc Reviewer",
+  "Journals", "Neurology","Ad Hoc Reviewer",
+  "Journals", "Neuropsychologia","Ad Hoc Reviewer",
+  "Journals", "Parkinsonism and Related disorders","Ad Hoc Reviewer",
+) %>% 
+  detailed_entries(
+    why =  Name,
+    with=Type,
+    what = Role
+  )
+```

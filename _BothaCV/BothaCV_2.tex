@@ -1,0 +1,214 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+% Awesome CV LaTeX Template for CV/Resume
+%
+% This template has been downloaded from:
+% https://github.com/posquit0/Awesome-CV
+%
+% Author:
+% Claud D. Park <posquit0.bj@gmail.com>
+% http://www.posquit0.com
+%
+%
+% Adapted to be an Rmarkdown template by Mitchell O'Hara-Wild
+% 23 November 2018
+%
+% Template license:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+%
+%-------------------------------------------------------------------------------
+% CONFIGURATIONS
+%-------------------------------------------------------------------------------
+% A4 paper size by default, use 'letterpaper' for US letter
+\documentclass[11pt, a4paper]{awesome-cv}
+
+% Configure page margins with geometry
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+
+% Specify the location of the included fonts
+\fontdir[fonts/]
+
+% Color for highlights
+% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
+%                 awesome-nephritis, awesome-concrete, awesome-darknight
+
+\definecolor{awesome}{HTML}{414141}
+
+% Colors for text
+% Uncomment if you would like to specify your own color
+% \definecolor{darktext}{HTML}{414141}
+% \definecolor{text}{HTML}{333333}
+% \definecolor{graytext}{HTML}{5D5D5D}
+% \definecolor{lighttext}{HTML}{999999}
+
+% Set false if you don't want to highlight section with awesome color
+\setbool{acvSectionColorHighlight}{true}
+
+% If you would like to change the social information separator from a pipe (|) to something else
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+\def\endfirstpage{\newpage}
+
+%-------------------------------------------------------------------------------
+%	PERSONAL INFORMATION
+%	Comment any of the lines below if they are not required
+%-------------------------------------------------------------------------------
+% Available options: circle|rectangle,edge/noedge,left/right
+
+\photo{avatar.jpg}
+\name{Hugo}{Botha}
+
+\position{Assistant Professor}
+\address{Department of Neurology, Mayo Clinic}
+
+\email{\href{mailto:botha.hugo@mayo.edu}{\nolinkurl{botha.hugo@mayo.edu}}}
+\homepage{www.github.io/HugoBothaMD}
+\twitter{HugoBothaMD}
+
+% \gitlab{gitlab-id}
+% \stackoverflow{SO-id}{SO-name}
+% \skype{skype-id}
+% \reddit{reddit-id}
+
+
+\usepackage{booktabs}
+
+% Templates for detailed entries
+% Arguments: what when with where why
+\usepackage{etoolbox}
+\def\detaileditem#1#2#3#4#5{%
+\cventry{#1}{#3}{#4}{#2}{\ifx#5\empty\else{\begin{cvitems}#5\end{cvitems}}\fi}\ifx#5\empty{\vspace{-4.0mm}}\else\fi}
+\def\detailedsection#1{\begin{cventries}#1\end{cventries}}
+
+% Templates for brief entries
+% Arguments: what when with
+\def\briefitem#1#2#3{\cvhonor{}{#1}{#3}{#2}}
+\def\briefsection#1{\begin{cvhonors}#1\end{cvhonors}}
+
+\providecommand{\tightlist}{%
+	\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+%------------------------------------------------------------------------------
+
+
+
+
+\begin{document}
+
+% Print the header with above personal informations
+% Give optional argument to change alignment(C: center, L: left, R: right)
+\makecvheader
+
+% Print the footer with 3 arguments(<left>, <center>, <right>)
+% Leave any of these blank if they are not needed
+% 2019-02-14 Chris Umphlett - add flexibility to the document name in footer, rather than have it be static Curriculum Vitae
+\makecvfooter
+  {February 2021}
+    {Hugo Botha~~~·~~~Curriculum Vitae}
+  {\thepage}
+
+
+%-------------------------------------------------------------------------------
+%	CV/RESUME CONTENT
+%	Each section is imported separately, open each file in turn to modify content
+%------------------------------------------------------------------------------
+
+
+
+\hypertarget{research-interests}{%
+\section{Research Interests}\label{research-interests}}
+
+\begingroup
+\small
+
+Neurodegenerative disease, Neuroimaging, Machine learning, Bayesian statistics
+
+\endgroup
+
+\hypertarget{education}{%
+\section{Education}\label{education}}
+
+\detailedsection{\detaileditem{Bachelor of Medicine Bachelor of Surgery (MBChB)}{01/2006-12/2011}{University of Stellenbosch}{Cape Town, WC, SA}{\empty}\detaileditem{Neurology Residency, Department of Neurology}{07/2012-06/2016}{Mayo Clinic}{Rochester, MN, USA}{\empty}\detaileditem{Behavioral Neurology Fellowship, Department of Neurology}{07/2016-06/2017}{Mayo Clinic}{Rochester, MN, USA}{\empty}\detaileditem{Clinician Investigator Program, Department of Radiology}{07/2017-06/2019}{Mayo Clinic}{Rochester, MN, USA}{\empty}}
+
+\hypertarget{awards}{%
+\section{Awards}\label{awards}}
+
+\detailedsection{\detaileditem{University of Stellenbosch}{}{Rector’s Award for Excellent Achievement: Academics}{2011}{\item{Awarded for outstanding achievement in either academics, sport or culture}}\detaileditem{University of Stellenbosch}{}{Graduated with Honors}{2011}{\empty}\detaileditem{University of Stellenbosch}{}{Faculty of Health Sciences Medal for Best Graduating Student}{2011}{\item{Awarded to the best undergraduate student from the graduating classes in health and allied health sciences}}\detaileditem{Mayo Clinic}{}{Mayo Brother's Fellowship Award}{2016}{\item{Based on the qualities associated with the founders, including outstanding clinical performance, humanitarianism, and scholarly activity}}\detaileditem{Mayo Clinic}{}{Department of Neurology Research Award}{2016}{\item{Recognition of outstanding basic or clinical research during residency or
+fellowship}}}
+
+\hypertarget{professional-memberships-and-activities}{%
+\section{Professional Memberships and Activities}\label{professional-memberships-and-activities}}
+
+\hypertarget{society-membership}{%
+\subsection{Society Membership}\label{society-membership}}
+
+\detailedsection{\detaileditem{Member}{2013-present}{American Academy of Neurology}{}{\empty}\detaileditem{Member}{2017-present}{International Society to Advance Alzheimer's Research and Treatment}{}{\empty}\detaileditem{Member}{2017-present}{Organization for Human Brain Mapping}{}{\empty}\detaileditem{Member}{2020-present}{International Society for Frontotemporal Dementias}{}{\empty}\detaileditem{Member}{2020-present}{Organization for Computational Neurosciences}{}{\empty}}
+
+\hypertarget{professional-service}{%
+\subsection{Professional Service}\label{professional-service}}
+
+\detailedsection{\detaileditem{Course Monitor}{}{Conferences}{}{\item{American Academy of Neurology Annual Meeting (2016)}}\detaileditem{Abstract Reviewer}{}{}{}{\item{Alzheimer's Association International Conference (2018, 2019, 2020)}}\detaileditem{Ad Hoc Reviewer}{}{Journals}{}{\item{Alzheimer's Research \& Therapy}\item{Brain}\item{Human Brain Mapping}\item{JAMA Psychiatry}\item{Journal of Alzheimer's Disease}\item{Journal of the Neurological Sciences}\item{Mayo Clinic Proceedings}\item{Medical Image Analysis}\item{Nature: Scientific Reports}\item{Neurobiology of Aging}\item{NeuroImage: Clinical}\item{Neurology}\item{Neuropsychologia}\item{Parkinsonism and Related disorders}}}
+
+\hypertarget{teaching}{%
+\section{Teaching}\label{teaching}}
+
+\hypertarget{internal-lectures}{%
+\subsection{Internal Lectures}\label{internal-lectures}}
+
+\detailedsection{\detaileditem{Basic Summer Lecture Series}{}{Neurology Residency Program}{}{\item{Bedside Cognitive Assessment (2018,2019,2020)}}\detaileditem{Neuroanatomy Course}{}{}{}{\item{Cortex I:  Cytoarchitecture and Organization (2019, 2020)}\item{Cortex II:  Lobes and Functions (2019, 2020)}}}
+
+\hypertarget{internal-conferences}{%
+\subsection{Internal Conferences}\label{internal-conferences}}
+
+\detailedsection{\detaileditem{Grand Rounds}{}{Neurology Department}{}{\item{Neurology Clinicopathologic Conference - A young man with progressive language difficulty (2015)}}\detaileditem{Subspecialty Conference}{}{}{}{\item{ Left Speechless: Dealing with the word salad of progressive aphasia and apraxia of speech (2015)}\item{The left hand of neurology: sinistrality, hemispheric specialization and neurodegenerative disease (2017)}}}
+
+\hypertarget{lay-public-focused-talks}{%
+\subsection{Lay Public Focused Talks}\label{lay-public-focused-talks}}
+
+\detailedsection{\detaileditem{Posterior Cortical Atrophy Education Seminar}{}{ADRC Patient-Caregiver Seminars}{}{\item{Making a Diagnosis}}\detaileditem{CBD and PSP Education Seminar}{}{}{}{\item{ Journey to the Diagnosis (2017)}}\detaileditem{Frontotemporal Dementia and Primary Progressive Aphasia Education Seminar}{}{}{}{\item{FTD/PPA: Making a Diagnosis (2017)}\item{FTD/PPA: Pathology and Pathophysiology (2017)}}\detaileditem{Chesley Center on Aging 2017 Dementia Care Conference}{}{Invited Talks}{}{\item{Latest Findings and Trends in Research (2017)}}}
+
+\hypertarget{institutionaldepartmental-activities}{%
+\section{Institutional/Departmental Activities}\label{institutionaldepartmental-activities}}
+
+\hypertarget{active}{%
+\subsection{Active}\label{active}}
+
+\detailedsection{\detaileditem{Voting Member}{}{Neurology Research Committee}{2019 - Current}{\empty}\detaileditem{Deputy Director}{}{Neurology Artificial Intelligence Program}{2020 - Current}{\empty}\detaileditem{Deputy Director}{}{Behavioral Neurology Fellowship}{2020 - Current}{\empty}\detaileditem{Section Chair (Neurology)}{}{Machine Learning/Deep Learning Journal Club}{2020 - Current}{\empty}}
+
+\hypertarget{prior}{%
+\subsection{Prior}\label{prior}}
+
+\detailedsection{\detaileditem{Prelim-year representative}{}{Mayo Internal Medicine Residents Council}{2012 - 2013}{\empty}\detaileditem{Voting Member}{}{Neurology Residency Recruitment Committee}{2014 - 2016}{\empty}}
+
+\hypertarget{mentoring}{%
+\section{Mentoring}\label{mentoring}}
+
+\detailedsection{\detaileditem{Project: Delays in the diagnosis of PPAOS}{}{Johhny Dang (Medical student)}{2019 - Current}{\item{Abstract submitted to AAN 2021}\item{
+Manuscript in preparation}}\detaileditem{Project: Neurologic causes for delusional infestation}{}{Zeynep Secking (Intern)}{2020 - Current}{\item{
+Manuscript in preparation}}\detaileditem{Project: FDG-PET to predict decline in atypical Alzheimer's disease}{}{Ryan Coburn (Neurology Resident)}{2020 - Current}{\item{
+Data collection in progress}}}
+
+\hypertarget{research-funding}{%
+\section{Research funding}\label{research-funding}}
+
+\hypertarget{active-1}{%
+\subsection{Active}\label{active-1}}
+
+\detailedsection{\detaileditem{National Institute on Deafness and Other Communication Disorders}{R01 DC 14942}{The neurobiology of two distinct types of progressive apraxia of speech (Co-I)}{2017-2022}{\empty}\detaileditem{National Institute on Deafness and Other Communication Disorders}{R01 DC 12519}{Longitudinal multi-modality imaging in progressive apraxia of speech (Co-I)}{2018-2023}{\empty}\detaileditem{ National Institute on
+Aging}{U19 AG 63911}{ARTFL LEFFTDS Longitudinal Frontotemporal Lobar Degeneration (ALLFTD) (Co-I)}{2019-2024}{\empty}\detaileditem{National Institute of
+Neurological Disorders and Stroke}{R03 NS 114365}{Independent brain metabolic patterns in Progressive Supranuclear Palsy (Co-I)}{2020-2022}{\empty}}
+
+\hypertarget{publications}{%
+\section{Publications}\label{publications}}
+
+\begingroup
+\setlength{\parindent}{-0in}
+\setlength{\leftskip}{0in}
+\setlength{\rightskip}{0.1in}
+\footnotesize
+
+\hypertarget{refs_published}{}
+
+\endgroup
+
+\end{document}

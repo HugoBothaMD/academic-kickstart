@@ -1,0 +1,18 @@
+
+# Mentoring
+```{r}
+tribble(
+  ~Year, ~Name,~Project1,~Status,
+  '2019 - Current', "Johhny Dang (Medical student)","Project: Delays in the diagnosis of PPAOS","Abstract submitted to AAN 2021",
+  '2019 - Current', "Johhny Dang (Medical student)","Project: Delays in the diagnosis of PPAOS","\nManuscript submitted",
+  '2020 - Current', "Zeynep Secking (Intern)","Project: Neurologic causes for delusional infestation","\nManuscript in preparation",
+  '2020 - Current', "Ryan Coburn (Neurology Resident)","Project: FDG-PET to predict decline in atypical Alzheimer's disease","\nData analysis in progress"
+) %>% 
+  detailed_entries(
+    where = Year,
+    with = Name, 
+    what = Project1,
+    why=Status
+  )
+
+```

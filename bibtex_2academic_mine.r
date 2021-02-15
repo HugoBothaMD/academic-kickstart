@@ -8,6 +8,7 @@ bibtex_2academic <- function(bibfile,
   require(stringr)
   require(anytime)
   require(tibble)
+  require(readr)
 
 
   #We need to fix the formatting
@@ -17,6 +18,7 @@ bibtex_2academic <- function(bibfile,
   l=gsub("\\&","\\\\&",l)
   l=gsub("\\\\beta","\\\\\\\\beta",l)
   l=gsub("\\^\\{\\\\textrm\\{18\\}\\}","\\^\\\\\\\\textrm\\{1\\}$$\\^\\\\\\\\textrm\\{8\\}",l)
+
   new_name=gsub(pattern = 'forsite',replacement = 'forsite_pubs',x = bibfile)
 
 
